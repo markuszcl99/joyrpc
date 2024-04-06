@@ -11,25 +11,33 @@
 
     <groupId>com.markus</groupId>
     <artifactId>joyrpc-read</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>joyrpc-read-client</module>
+        <module>joyrpc-read-api</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
+        <slf4j.version>1.7.30</slf4j.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-    <dependencies>
-        <dependency>
-            <groupId>io.joyrpc</groupId>
-            <artifactId>joyrpc-all</artifactId>
-            <version>1.4.8-SNAPSHOT</version>
-        </dependency>
-        <!-- slf4j -->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-simple</artifactId>
-            <scope>compile</scope>
-        </dependency>
-    </dependencies>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>io.joyrpc</groupId>
+                <artifactId>joyrpc-all</artifactId>
+                <version>1.4.8-SNAPSHOT</version>
+            </dependency>
 
+            <!-- slf4j -->
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-simple</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 </project>
