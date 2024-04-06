@@ -24,7 +24,7 @@ public class Client {
         ConsumerConfig<EchoService> consumerConfig = new ConsumerConfig<>();
         consumerConfig.setInterfaceClazz(EchoService.class.getName());
         consumerConfig.setAlias("joyrpc-read-demo");
-//        consumerConfig.setRegistry(new RegistryConfig("broadcast"));
+        // consumerConfig.setRegistry(new RegistryConfig("broadcast"));
         consumerConfig.setRegistry(new RegistryConfig("fix", "grpc://127.0.0.1:22000"));
         consumerConfig.setTimeout(1000000);
         try {
