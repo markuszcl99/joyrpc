@@ -49,7 +49,6 @@
         <module>joyrpc-example</module>
         <module>joyrpc-all</module>
         <module>joyrpc-read</module>
-        <module>joyrpc-read/joyrpc-read-spring</module>
     </modules>
 
     <properties>
