@@ -15,6 +15,7 @@
     <modules>
         <module>joyrpc-read-client</module>
         <module>joyrpc-read-api</module>
+        <module>joyrpc-read-spring</module>
     </modules>
 
     <properties>
